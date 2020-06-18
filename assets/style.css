@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Gotham Rounded', sans-serif;
+}
+
+.main-header {
+    color: white;
+}
+
+.navbar {
+    justify-content: center;
+}
+
+.aside {
+    background-color: lightgray;
+}
+
+.main {
+    background-color: blue;
+}
+
+.navbar {
+    width: 100%;
+}
