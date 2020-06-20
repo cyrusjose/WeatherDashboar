@@ -17,10 +17,10 @@
     background-color: #f9f9f9;
 }
 
-
-/* .weather-info {
+.forecast,
+.weather-info {
     background-color: blue;
-} */
+}
 
 .navbar {
     width: 100%;

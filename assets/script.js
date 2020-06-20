@@ -1,7 +1,6 @@
 $(document).ready(function() {
     $('.btn').on('click', function() {
 
-
         var weatherKey = 'a578b472b89abb8cbd34e73dc5c8b531';
         var cityName = $('.cityName').val();
         var queryURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + weatherKey;
@@ -21,9 +20,9 @@ $(document).ready(function() {
             var lon = response.coord.lon;
             console.log(lon);
             $('.cityText').text(title);
-            $('.temp').text('Temperature: ' + temp.toFixed(1) + '\u00B0');
-            $('.humidity').text('Humidity: ' + humidity + '\%');
-            $('.windSpeed').text('Wind Speed: ' + wind + ' mph');
+            $('.temp').text(temp.toFixed(1) + '\u00B0');
+            $('.humidity').text(humidity + '\%');
+            $('.windSpeed').text(+wind + ' mph');
 
             var uvURL = 'http://api.openweathermap.org/data/2.5/uvi?appid=' + weatherKey + '&lat=' + lat + '&lon=' + lon;
             $.ajax({
@@ -31,7 +30,7 @@ $(document).ready(function() {
                 method: 'Get'
             }).then(function(UV) {
                 console.log(UV);
-                $('.UV').text('UV Index: ' + UV.value)
+                $('.UV').text(UV.value)
             });
 
             var fiveDayURL = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=' + weatherKey;
