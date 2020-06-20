@@ -3,6 +3,13 @@ $(document).ready(function() {
     var cityName = $('.cityName').val();
     var queryURL = 'api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + weatherKey;
 
+    $.ajax({
+        query: queryURL,
+        method: 'GET'
+    }).then({
+
+    });
+
     // Optional Code for temperature conversion
     var fahrenheit = true;
 
