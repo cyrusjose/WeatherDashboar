@@ -1,5 +1,7 @@
 $(document).ready(function() {
     var weatherKey = 'a578b472b89abb8cbd34e73dc5c8b531';
+    var cityName = $('.cityName').val();
+    var queryURL = 'api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + weatherKey;
 
     // Optional Code for temperature conversion
     var fahrenheit = true;
