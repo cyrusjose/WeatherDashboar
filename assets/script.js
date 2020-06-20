@@ -1,13 +1,14 @@
 $(document).ready(function() {
     var weatherKey = 'a578b472b89abb8cbd34e73dc5c8b531';
     var cityName = $('.cityName').val();
-    var queryURL = 'api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + weatherKey;
+    var queryURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + 'colton' + '&appid=a578b472b89abb8cbd34e73dc5c8b531';
 
     $.ajax({
-        query: queryURL,
-        method: 'GET'
-    }).then({
-
+        url: queryURL,
+        method: "GET"
+    }).then(function(response) {
+        console.log(response);
+        // $('.weather-info').text(JSON.stringify(response));
     });
 
     // Optional Code for temperature conversion
