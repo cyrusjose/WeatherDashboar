@@ -26,6 +26,10 @@
     width: 100%;
 }
 
+.weatherForecast{
+    box-shadow: 0 0 15px black;
+}
+
 .hide {
     display: none;
 }
