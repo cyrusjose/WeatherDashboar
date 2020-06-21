@@ -65,42 +65,67 @@
             </ul>
           </div>
         </div>
-        <div class="col-7 m-3 weather-info">
-          <h1 class="cityText">
-            <span class="cityText">PlaceHolder</span>
-            <span class="date">(today)</span>
+        <div class="col-7 m-3 weather-info hide">
+          <h1>
+            <span class="cityText"></span>
+            <span class="date"></span>
+            <img class = "todayIcon"></img>
           </h1>
+          <div><span class="temp"></span></div>
           <br />
-          <div>Temperature: <span class="temp"></span></div>
+          <div> <span class="humidity"></span></div>
           <br />
-          <div>Humidity: <span class="humidity"></span></div>
+          <div> <span class="windSpeed"></span></div>
           <br />
-          <div>Wind Speed: <span class="windSpeed"></span></div>
-          <br />
-          <div>UV Index: <span class="UV"></span></div>
+          <div>UV Index: <span class="UV-value"></span></div>
         </div>
       </div>
-      <div class="row">
+      <div class="row hide">
         <div class="col m-3 forecast">
           <h1>5-day Forecast</h1>
         </div>
     </div>
-        <div class = "row">
+        <div class = "row hide">
         <div class="card-deck m-3">
           <div class="card bg-primary text-white text-center p-3">
-            <div class="dayOne"></div>
+            <div class="dayOne">
+                <img class = "dOneIcon"></img>
+                <div class = "tempOne"></div>
+                <br/>
+                <div class = "humOne"></div>
+            </div>
           </div>
           <div class="card bg-primary text-white text-center p-3">
-            <div class="dayTwo"></div>
+            <div class="dayTwo">
+                <img class = "dTwoIcon"></img>
+                <div class = "tempTwo"></div>
+                <br/>
+                <div class = "humTwo"></div>
+            </div>
           </div>
           <div class="card bg-primary text-white text-center p-3">
-            <div class="dayThree"></div>
+            <div class="dayThree">
+                <img class = "dThreeIcon"></img>
+                <div class = "tempThree"></div>
+                <br/>
+                <div class = "humThree"></div>
+            </div>
           </div>
           <div class="card bg-primary text-white text-center p-3">
-            <div class="dayFour"></div>
+            <div class="dayFour">
+                <img class = "dFourIcon"></img>
+                <div class = "tempFour"></div>
+                <br/>
+                <div class = "humFour"></div>
+            </div>
           </div>
           <div class="card bg-primary text-white text-center p-3">
-            <div class="dayFive"></div>
+            <div class="dayFive">
+                <img class = "dFiveIcon"></img>
+                <div class = "tempFive"></div>
+                <br/>
+                <div class = "humFive"></div>
+            </div>
           </div>
         </div>
       </div>

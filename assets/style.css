@@ -17,11 +17,15 @@
     background-color: #f9f9f9;
 }
 
-.forecast,
+/* .forecast,
 .weather-info {
     background-color: blue;
-}
+} */
 
 .navbar {
     width: 100%;
+}
+
+.hide {
+    display: none;
 }
