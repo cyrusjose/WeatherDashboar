@@ -26,8 +26,10 @@
     width: 100%;
 }
 
-.weatherForecast{
+.weatherForecast, .weather-info{
+    border-radius: 20px;
     box-shadow: 0 0 15px black;
+    padding: 20px;
 }
 
 .hide {
