@@ -13,9 +13,9 @@
     justify-content: center;
 }
 
-.aside {
+/* .aside {
     background-color: #f9f9f9;
-}
+} */
 
 /* .forecast,
 .weather-info {
@@ -26,7 +26,7 @@
     width: 100%;
 }
 
-.weatherForecast, .weather-info{
+.weatherForecast{
     border-radius: 20px;
     box-shadow: 0 0 15px black;
     padding: 20px;
