@@ -52,7 +52,7 @@ $(document).ready(function () {
     var weatherKey = "a578b472b89abb8cbd34e73dc5c8b531";
     var cityName = $(".cityName").val();
     var queryURL =
-      "http://api.openweathermap.org/data/2.5/weather?q=" +
+      "https://api.openweathermap.org/data/2.5/weather?q=" +
       cityName +
       "&appid=" +
       weatherKey;
@@ -75,7 +75,7 @@ $(document).ready(function () {
       var humidity = response.main.humidity;
       var wind = response.wind.speed;
       var iconNum = response.weather[0].icon;
-      var iconImage = "http://openweathermap.org/img/w/" + iconNum + ".png";
+      var iconImage = "https://openweathermap.org/img/w/" + iconNum + ".png";
 
       var lat = response.coord.lat;
     //   Test to make sure that latitude is grabbed
@@ -92,7 +92,7 @@ $(document).ready(function () {
       $(".windSpeed").text("Wind Speed: " + wind + " mph");
         // URL for UV Index ajax call
       var uvURL =
-        "http://api.openweathermap.org/data/2.5/uvi?appid=" +
+        "https://api.openweathermap.org/data/2.5/uvi?appid=" +
         weatherKey +
         "&lat=" +
         lat +
@@ -123,7 +123,7 @@ $(document).ready(function () {
 
     //   URL for five day forecast call
       var fiveDayURL =
-        "http://api.openweathermap.org/data/2.5/forecast?lat=" +
+        "https://api.openweathermap.org/data/2.5/forecast?lat=" +
         lat +
         "&lon=" +
         lon +
@@ -161,14 +161,14 @@ $(document).ready(function () {
         var iconFour = dFour.weather[0].icon;
         var iconFive = dFive.weather[0].icon;
         // Icon information in variables
-        var icImageOne = "http://openweathermap.org/img/w/" + iconOne + ".png";
-        var icImageTwo = "http://openweathermap.org/img/w/" + iconTwo + ".png";
+        var icImageOne = "https://openweathermap.org/img/w/" + iconOne + ".png";
+        var icImageTwo = "https://openweathermap.org/img/w/" + iconTwo + ".png";
         var icImageThree =
-          "http://openweathermap.org/img/w/" + iconThree + ".png";
+          "https://openweathermap.org/img/w/" + iconThree + ".png";
         var icImageFour =
-          "http://openweathermap.org/img/w/" + iconFour + ".png";
+          "https://openweathermap.org/img/w/" + iconFour + ".png";
         var icImageFive =
-          "http://openweathermap.org/img/w/" + iconFive + ".png";
+          "https://openweathermap.org/img/w/" + iconFive + ".png";
 
         //   Display Temperature on page for the five days
         $(".tempOne").text("Temperature: " + tempOne.toFixed(1) + "\u00B0");
