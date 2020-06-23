@@ -4,7 +4,9 @@ $(document).ready(function () {
 
     var cityList = [];
     init();
+    
     function renderCityList() {
+        // Render an new Li for each city entered even repeats.
       $(".list-group").empty();
       for (var i = 0; i < cityList.length; i++) {
         var city = cityList[i];
