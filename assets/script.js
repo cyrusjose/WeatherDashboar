@@ -5,7 +5,7 @@ $(document).ready(function () {
     $(".btn").on("click", function (event) {
     
     event.preventDefault();
-
+    
     var cityList = [];
     init();
     function renderCityList(){
