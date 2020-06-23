@@ -48,7 +48,12 @@ $(document).ready(function () {
       cityName +
       "&appid=" +
       weatherKey;
-
+    $(".date").text(" ("+ moment().format('l') + ") ");
+    $(".dateOne").text(moment().add(1, 'days').format('l'));
+    $(".dateTwo").text(moment().add(2, 'days').format('l'));
+    $(".dateThree").text(moment().add(3, 'days').format('l'));
+    $(".dateFour").text(moment().add(4, 'days').format('l'));
+    $(".dateFive").text(moment().add(5, 'days').format('l'));
     $.ajax({
       url: queryURL,
       method: "GET",
