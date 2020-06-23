@@ -1,46 +1,40 @@
 $(document).ready(function () {
- 
-    
-
-    $(".btn").on("click", function (event) {
-    
+  $(".btn").on("click", function (event) {
     event.preventDefault();
-    
+
     var cityList = [];
     init();
-    function renderCityList(){
-        $('.list-group').empty();
-        for(var i = 0; i < cityList.length; i++){
-            var city = cityList[i];
-            var li = $('<li>');
-            li.text(city);
-            li.attr('class','list-group-item');
-            $('.list-group').append(li);
-        }
-        
+    function renderCityList() {
+      $(".list-group").empty();
+      for (var i = 0; i < cityList.length; i++) {
+        var city = cityList[i];
+        var li = $("<li>");
+        li.text(city);
+        li.attr("class", "list-group-item");
+        $(".list-group").append(li);
+      }
     }
 
-    function init(){
-        var storedCity = JSON.parse(localStorage.getItem('City'));
+    function init() {
+      var storedCity = JSON.parse(localStorage.getItem("City"));
 
-        if (storedCity !== null){
-            cityList = storedCity;
-        }
-        renderCityList();
+      if (storedCity !== null) {
+        cityList = storedCity;
+      }
+      renderCityList();
     }
 
-    function storeCity(){
-        localStorage.setItem('City', JSON.stringify(cityList));
+    function storeCity() {
+      localStorage.setItem("City", JSON.stringify(cityList));
     }
-    
-    var cityListText = $('.cityName').val().trim();
 
-    if(cityListText === ""){
-        return;
+    var cityListText = $(".cityName").val().trim();
+
+    if (cityListText === "") {
+      return;
     }
-    
+
     cityList.push(cityListText);
-  
 
     renderCityList();
     storeCity();
@@ -59,17 +53,16 @@ $(document).ready(function () {
       url: queryURL,
       method: "GET",
     }).then(function (response) {
-      
-        $('.cityName').val(" ");
-        console.log(response);
-      
+      $(".cityName").val(" ");
+      console.log(response);
+
       var title = response.name;
       var temp = response.main.temp * (9 / 5) - 459.67;
       var humidity = response.main.humidity;
       var wind = response.wind.speed;
       var iconNum = response.weather[0].icon;
       var iconImage = "http://openweathermap.org/img/w/" + iconNum + ".png";
-      
+
       var lat = response.coord.lat;
       console.log(lat);
       var lon = response.coord.lon;
@@ -92,21 +85,21 @@ $(document).ready(function () {
         method: "Get",
       }).then(function (UV) {
         console.log(UV);
-        var uvIndex = $('.UV-value');
+        var uvIndex = $(".UV-value");
         var uvIndexVal = UV.value;
         uvIndex.text(uvIndexVal);
 
-        if (uvIndexVal > 0 && uvIndexVal < 6){
-            uvIndex.addClass('moderate');
+        if (uvIndexVal > 0 && uvIndexVal < 6) {
+          uvIndex.addClass("moderate");
         } else if (uvIndexVal > 5 && uvIndexVal < 8) {
-            uvIndex.addClass('high');
+          uvIndex.addClass("high");
         } else if (uvIndexVal > 7 && uvIndexVal < 11) {
-            uvIndex.addClass('veryHigh');
+          uvIndex.addClass("veryHigh");
         } else {
-            uvIndex.addClass('extreme');
+          uvIndex.addClass("extreme");
         }
       });
-      
+
       var fiveDayURL =
         "http://api.openweathermap.org/data/2.5/forecast?lat=" +
         lat +
