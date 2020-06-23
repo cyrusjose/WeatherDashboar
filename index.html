@@ -22,6 +22,7 @@
         </h1>
       </nav>
       <div class="row">
+        <!-- Search bar and History -->
         <div class="col-4 aside m-3">
           <div class="input-group m-3 p-3 pr-3">
             <input
@@ -64,7 +65,8 @@
             </ul>
           </div>
         </div>
-        <div class="col-7 m-3 weather-info hide">
+        <!-- Current-Day Weather Info -->
+        <div class="col-7 m-3 aside weather-info hide">
           <h1>
             <span class="cityText"></span>
             <span class="date"></span>
@@ -78,13 +80,9 @@
           <br />
           <div>UV Index: <span class="UV-value"></span></div>
         </div>
-      </div>
-      <div class="row hide">
-        <div class="col m-3 forecast">
-          <h1>5-day Forecast</h1>
-        </div>
-     </div>
-        <div class = "row hide">
+     <!-- Five-Day forecast Cards-->
+        <div class = "row m-3 hide">
+          <h1>5-day Forecast:</h1>
         <div class="card-deck m-3">
           <div class="card weatherForecast bg-primary text-white text-center p-3">
             <div class="dayOne">
@@ -138,6 +136,8 @@
           </div>
         </div>
       </div>
+      </div>
+      
     </div>
 
     <script
