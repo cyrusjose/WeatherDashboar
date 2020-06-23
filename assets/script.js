@@ -89,7 +89,19 @@ $(document).ready(function () {
         method: "Get",
       }).then(function (UV) {
         console.log(UV);
-        $(".UV-value").text(UV.value);
+        var uvIndex = $('.UV-value');
+        var uvIndexVal = UV.value;
+        uvIndex.text(uvIndexVal);
+
+        if (uvIndexVal > 0 && uvIndexVal < 6){
+            uvIndex.addClass('moderate');
+        } else if (uvIndexVal > 5 && uvIndexVal < 8) {
+            uvIndex.addClass('high');
+        } else if (uvIndexVal > 7 && uvIndexVal < 11) {
+            uvIndex.addClass('veryHigh');
+        } else {
+            uvIndex.addClass('extreme');
+        }
       });
 
       var fiveDayURL =
