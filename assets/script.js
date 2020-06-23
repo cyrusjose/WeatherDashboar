@@ -17,6 +17,7 @@ $(document).ready(function () {
             li.attr('class','list-group-item');
             $('.list-group').append(li);
         }
+        
     }
 
     function init(){
@@ -39,7 +40,7 @@ $(document).ready(function () {
     }
     
     cityList.push(cityListText);
-    $('.cityName').empty();
+  
 
     renderCityList();
     storeCity();
@@ -58,7 +59,9 @@ $(document).ready(function () {
       url: queryURL,
       method: "GET",
     }).then(function (response) {
-      console.log(response);
+      
+        $('.cityName').val(" ");
+        console.log(response);
       
       var title = response.name;
       var temp = response.main.temp * (9 / 5) - 459.67;
@@ -103,7 +106,7 @@ $(document).ready(function () {
             uvIndex.addClass('extreme');
         }
       });
-
+      
       var fiveDayURL =
         "http://api.openweathermap.org/data/2.5/forecast?lat=" +
         lat +
